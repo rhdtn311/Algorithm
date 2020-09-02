@@ -1,4 +1,5 @@
 # greedy5 의 다른 방식으로 문제풀이
+# 다시 보니까 똑같은 말인 것 같다.
 
 n = int(input())
 people = list(map(int,input().split()))
