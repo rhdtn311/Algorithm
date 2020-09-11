@@ -1,3 +1,7 @@
+# 백준 4963 섬의 개수 문제 for문에서 for i in range(w) : for j in range(h) 라 하고 
+# 그 아래 graph[i][j] 라 해서 런타임 오류가 발생하였다. list out of range 에러가 발생할 경우가 있어서 런타임 오류가 발생한 것인데,
+# 2차원 배열에서는 앞으로 graph[높이][너비] 와 같이 생각해야겠다. 
+
 from collections import deque
 
 while True : 
@@ -11,8 +15,8 @@ while True :
 
     queue = deque() 
     result = 0  
-    for i in range(w) : 
-        for j in range(h) : 
+    for i in range(h) : 
+        for j in range(w) : 
             if graph[i][j] == 1 :   
                 queue.append((i,j)) 
                 graph[i][j] = 2 
