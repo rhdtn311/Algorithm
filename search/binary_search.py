@@ -1,3 +1,5 @@
+# 재귀 함수를 이용한 이진 탐색
+
 def binary_search(array,target,start,end) : 
     if start>end :
         return None
