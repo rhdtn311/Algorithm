@@ -1,3 +1,5 @@
+# 백준 2805번 나무자르기 문제
+
 n,m = map(int,input().split())
 trees = list(map(int,input().split()))
 
