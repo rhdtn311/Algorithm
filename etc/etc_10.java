@@ -15,31 +15,19 @@ public class etc_10 {
         int[] result = {oneResult, twoResult, threeResult};
         Arrays.sort(result);
 
-        int[] answer;
-        if (result[2] == result[0]) {
-            return new int[] {1,2,3};
-        } else if (result[2] == result[1]) {
-            answer = new int[] {result[1], result[2]};
-        } else {
-            answer = new int[] {result[2]};
+        int max = result[2];
+        ArrayList<Integer> arr = new ArrayList<>();
+
+        int[] originalResult = {oneResult, twoResult, threeResult};
+        for (int i = 0; i<3; i++) {
+            if (max == originalResult[i]) {
+                arr.add(1+i);
+            }
         }
 
-        int studentIndex = 0;
-        boolean checkOne = false;
-        boolean checkTwo = false;
-        boolean checkThree =false;
-        for (int i : answer) {
-            if (i == oneResult && checkOne == false) {
-                answer[studentIndex] = 1;
-                checkOne = true;
-            } else if (i == twoResult && checkTwo == false) {
-                answer[studentIndex] = 2;
-                checkTwo = true;
-            } else if (i == threeResult && checkThree == false){
-                answer[studentIndex] = 3;
-                checkThree = true;
-            }
-            studentIndex++;
+        int[] answer = new int[arr.size()];
+        for (int i = 0; i < arr.size(); i++) {
+            answer[i] = arr.get(i);
         }
 
         return answer;
