@@ -3,8 +3,9 @@ package stack_and_queue;
 public class Stack {
 
     private Node last;  // 가장 최근에 들어온 노드
+    public int size;   // 노드 수
 
-    private class Node {    // 값을 갖는 노드
+    public static class Node {    // 값을 갖는 노드
 
         private Object data;    // 값
         private Node next;  // 바로 전에 들어온 노드
@@ -16,7 +17,7 @@ public class Stack {
     }
 
     // 스택 출력 ( 가장 먼저 들어온 노드가 가장 뒤에 )
-    public String toString() {
+    public String stackToString() {
         StringBuilder s = new StringBuilder();
         s.append("{");
 
@@ -38,6 +39,7 @@ public class Stack {
 
         newNode.next = last;    // 가장 최근에 들어왔던 노드를 이 노드의 다음 노드로 설정
         last = newNode; // 가장 최근 노드를 이 노드로 설정
+        size++;
     }
 
     public Object pop() {
@@ -47,6 +49,7 @@ public class Stack {
         } else {
             Object data = last.data;    // 가장 최근에 들어온 노드의 값
             last = last.next;   // 가장 최근 노드의 다음 노드를 가장 최근 노드로 설정
+            size--;
             return data;
         }
         return null;
@@ -60,7 +63,7 @@ public class Stack {
             return last.data;   // 가장 최근에 들어온 노드의 값을 반환
         }
 
-        return null;
+        return last.data;
     }
 
     public boolean isEmpty() {
@@ -71,21 +74,13 @@ public class Stack {
     }
 
     public static void main(String[] args) {
-        Stack stack = new Stack();
 
-        stack.push(0);
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-        stack.pop();
-        stack.peek();
-        stack.push(50);
-        stack.pop();
-        stack.pop();
-        stack.pop();
-        stack.pop();
+        Stack stack= new Stack();
+
+        System.out.println(stack.size);
 
 
-        System.out.println(stack.toString());
+
+
     }
 }
