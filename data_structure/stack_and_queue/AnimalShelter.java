@@ -1,6 +1,6 @@
 package stack_and_queue;
 
-// 큐에
+// 개와 고양이만 수용하는 동물 보호소 먼저 들어온 동물이 먼저 나간다.
 public class AnimalShelter {
     private Animal first;
     private Animal last;
@@ -14,6 +14,7 @@ public class AnimalShelter {
         }
     }
 
+    // 동물을 수용소에 넣음
     public void enqueue(String type) {
 
         Animal animal = new Animal(type);
@@ -26,6 +27,7 @@ public class AnimalShelter {
         }
     }
 
+    // 먼저 들어온 동물을 내보냄
     public String dequeueAny() {
 
         if (last == null) {
@@ -36,6 +38,7 @@ public class AnimalShelter {
         return type;
     }
 
+    // 가장 오래된 강아지만 내보냄
     public String dequeueDog() {
 
         if (last == null) {
@@ -59,6 +62,7 @@ public class AnimalShelter {
         return result;
     }
 
+    // 가장 오래된 고양이만 내보냄
     public String dequeueCat() {
         if (last == null) {
             return null;
