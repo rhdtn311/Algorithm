@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class StackProblem1 {
+public class QueueProblem1 {
     // 프로그래머스 lv2 : 기능 개발 (https://programmers.co.kr/learn/courses/30/lessons/42586)
     public int[] solution(int[] progresses, int[] speeds) {
 

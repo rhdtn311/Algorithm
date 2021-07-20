@@ -3,7 +3,7 @@ package stack_and_queue;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class StackProblem2 {
+public class QueueProblem2 {
     // 프로그래머스 lv 2 : 프린터 (https://programmers.co.kr/learn/courses/30/lessons/42587)
     public int solution(int[] priorities, int location) {
 
@@ -54,7 +54,7 @@ public class StackProblem2 {
     }
 
     public static void main(String[] args) {
-        StackProblem2 s = new StackProblem2();
+        QueueProblem2 s = new QueueProblem2();
         int solution = s.solution(new int[]{1,1}, 1);
         System.out.println(solution);
     }
