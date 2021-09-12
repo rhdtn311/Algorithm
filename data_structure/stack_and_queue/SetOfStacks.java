@@ -8,13 +8,25 @@ public class SetOfStacks {
     ArrayList<Stack> arrayList = new ArrayList<>();
     int capacity;
 
+    public class Node {    // 값을 갖는 노드
+
+        public Object data;    // 값
+        private Stack.Node next;  // 바로 전에 들어온 노드
+
+        public Node(Object data) {
+            this.data =data;
+        }
+
+    }
+
     public SetOfStacks(int capacity) {
         this.capacity = capacity;
     }
 
     public void push(Object data) {
 
-        Stack.Node node = new Stack.Node(data);
+        Node node = new Node(data);
+
         if (arrayList.size() == 0) {
             Stack firstStack = new Stack();
             firstStack.push(node);

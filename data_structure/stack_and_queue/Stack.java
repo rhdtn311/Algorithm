@@ -2,12 +2,12 @@ package stack_and_queue;
 
 public class Stack {
 
-    private Node last;  // 가장 최근에 들어온 노드
+    public Node last;  // 가장 최근에 들어온 노드
     public int size;   // 노드 수
 
-    public static class Node {    // 값을 갖는 노드
+    public class Node {    // 값을 갖는 노드
 
-        private Object data;    // 값
+        public Object data;    // 값
         private Node next;  // 바로 전에 들어온 노드
 
         public Node(Object data) {
@@ -75,9 +75,10 @@ public class Stack {
 
     public static void main(String[] args) {
 
-        Stack stack= new Stack();
 
-        System.out.println(stack.size);
+        Stack stack = new Stack();
+        stack.push(10);
+        System.out.println(stack.pop());
 
 
 

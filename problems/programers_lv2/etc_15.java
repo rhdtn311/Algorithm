@@ -49,9 +49,25 @@ public class etc_15 {
         return result;
     }
 
+    public void solution2(String s) {
+        String s10 = s.replaceAll("[{]", " ").replaceAll("[}]", " ");
+        String s20 = s10.trim();
+        String[] s3 = s20.split(" , ");
+
+        Arrays.sort(s3, (a,b) -> {return a.length() - b.length();});
+
+        Set<String> set = new HashSet<>();
+        int[] answer = new int[s3.length];
+        int idx = 0;
+        for(String s1 : s3) {
+            for(String s2 : s1.split(",")) {
+                if(set.add(s2)) answer[idx++] = Integer.parseInt(s2);
+            }
+        }
+    }
+
     public static void main(String[] args) {
         etc_15 s = new etc_15();
-        int[] solution = s.solution("{{4,2,3},{3},{2,3,4,1},{2,3}}");
-        System.out.println(Arrays.toString(solution));
+        s.solution2("{{4,2,3},{3},{2,3,4,1},{2,3}}");
     }
 }

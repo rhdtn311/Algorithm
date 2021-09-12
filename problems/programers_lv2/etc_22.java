@@ -21,23 +21,4 @@ public class etc_22 {
 
         return result - 1;
     }
-
-//    public static void combination(int r, int[] values) {
-//        for (int i = 1; i <  (1 << r) ; i++) {
-//            int value = 1;
-//            for (int j = 0; j < r; j++) {
-//                if ((i & (1 << j)) > 0) {
-//                    value *= values[j];
-//                }
-//            }
-//            arrayList.add(value);
-//        }
-//    }
-
-    public static void main(String[] args) {
-        etc_22 s = new etc_22();
-        int solution = s.solution(new String[][]{{"yellowhat", "headgear"}, {"bluesunglasses", "eyewear"}, {"green_turban", "headgear"}});
-        System.out.println(solution);
-
-    }
 }

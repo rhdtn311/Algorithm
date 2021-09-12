@@ -49,4 +49,22 @@ public class BFS_DFS_Problem6 {
             dfs(nextNode, isVisited, arrayList);
         }
     }
+
+    public static void bfs(int node, boolean[] isVisited, ArrayList<ArrayList<Integer>> arrayList) {
+
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(node);
+
+        while (!queue.isEmpty()) {
+            Integer nextNode = queue.poll();
+            isVisited[nextNode] = true;
+
+            ArrayList<Integer> nodes = arrayList.get(nextNode);
+            for (int i = 0; i < nodes.size(); i++) {
+                if (!isVisited[nodes.get(i)]) {
+                    queue.add(nodes.get(i));
+                }
+            }
+        }
+    }
 }

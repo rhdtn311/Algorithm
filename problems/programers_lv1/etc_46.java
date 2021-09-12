@@ -1,4 +1,5 @@
-import java.util.Arrays;
+package programers_lv1;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,13 +9,13 @@ public class etc_46 {
 
         Map<String, Integer> map = new HashMap<>();
         String input = "";
-        String result = "";
-        map.put("one", 1); map.put("two",2); map.put("three",3); map.put("four",4); map.put("five",5);
-        map.put("six",6); map.put("seven",7); map.put("eight",8); map.put("nine",9); map.put("zero",0);
+            String result = "";
+            map.put("one", 1); map.put("two",2); map.put("three",3); map.put("four",4); map.put("five",5);
+            map.put("six",6); map.put("seven",7); map.put("eight",8); map.put("nine",9); map.put("zero",0);
 
-        char[] array = s.toCharArray();
-        for (char c : array) {
-            if(Character.isDigit(c)) {
+            char[] array = s.toCharArray();
+            for (char c : array) {
+                if(Character.isDigit(c)) {
                 result += Character.getNumericValue(c);
                 continue;
             }
