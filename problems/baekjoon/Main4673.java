@@ -1,27 +1,38 @@
 package baekjoon;
 
+import java.util.Arrays;
+
 public class Main4673 {
-
     public static void main(String[] args) {
-        boolean[] having = new boolean[10000];
 
+        boolean[] safeBox = new boolean[10001];
         for (int i = 1; i < 10000; i++) {
-            int num = i;
-            int sum = i;
-            while (num != 0) {
-                sum += num % 10;
-                num /= 10;
-            }
-            if (sum < 10000) {
-                having[sum] = true;
+            int num = getSafeNumber(i);
+
+            if (num < 10000) {
+                safeBox[num] = true;
             }
         }
+        System.out.println(Arrays.toString(safeBox));
 
+        StringBuilder s = new StringBuilder();
         for (int i = 1; i < 10000; i++) {
-            if (!having[i]) {
-                System.out.println(i);
+            if (!safeBox[i]) {
+                s.append(i).append("\n");
             }
         }
+        System.out.println(s);
+    }
+
+    public static int getSafeNumber(int n) {
+
+        int sum = n;
+        while(n != 0) {
+            sum += n % 10;
+            n /= 10;
+        }
+
+        return sum;
     }
 }
 
