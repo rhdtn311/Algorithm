@@ -16,10 +16,6 @@ public class Main2775 {
             dp[i][0] = 1;
         }
 
-        // 1 3
-        for (int i = 0; i < 3; i++) {
-            dp[1][3] += dp[0][i];
-        }
         for (int i = 0; i < n; i++) {
             int floor = Integer.parseInt(br.readLine());
             int ho = Integer.parseInt(br.readLine());
