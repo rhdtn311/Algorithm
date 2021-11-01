@@ -34,8 +34,6 @@ public class Main12865 {
                 }
             }
         }
-
         System.out.println(dp[k][n]);
     }
-
 }
