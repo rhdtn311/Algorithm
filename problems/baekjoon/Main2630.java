@@ -31,9 +31,6 @@ public class Main2630 {
     }
 
     static void dfs(int x, int y, int n) {
-        if (x + n > N || y + n > N) {
-            return;
-        }
 
         if (checkFull(x, y, n)) {
             return;
