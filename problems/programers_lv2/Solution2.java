@@ -17,7 +17,6 @@ public class Solution2 {
             }
         }
 
-        System.out.println(map);
         for (String s : record) {
             String[] input = s.split(" ");
 
