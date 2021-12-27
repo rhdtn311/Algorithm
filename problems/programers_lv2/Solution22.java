@@ -7,7 +7,6 @@ public class Solution22 {
     public int solution(String name) {
 
         for (int i = 0; i < name.length(); i++) {
-            System.out.println(25 - (name.charAt(i) - 'A'));
             count += Math.min(name.charAt(i) - 'A', 25 - (name.charAt(i) - 'A') + 1);
         }
 
@@ -19,6 +18,9 @@ public class Solution22 {
                 while (minCount < name.length() && name.charAt(minCount) == 'A') {
                     minCount++;
                 }
+            }
+            if (minCount == name.length()) {
+                min = Math.min(i, min);
             }
 
             min = Math.min(min, i + i + name.length() - minCount);
