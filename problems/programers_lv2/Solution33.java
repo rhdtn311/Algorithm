@@ -3,10 +3,6 @@ package programers_lv2;
 import java.util.Stack;
 
 public class Solution33 {
-    public static void main(String[] args) {
-        String solution = solution("999", 2);
-        System.out.println(solution);
-    }
 
     public static String solution(String number, int k) {
         Stack<Integer> stack = new Stack<>();
