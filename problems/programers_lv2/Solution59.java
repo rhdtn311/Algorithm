@@ -6,25 +6,16 @@ import java.util.Arrays;
 public class Solution59 {
 
     static int max = 0;
-    static int infoSum;
     static int[] result = new int[11];
 
-    public static void main(String[] args) {
-        System.out.println(Arrays.toString(solution(10, new int[]{0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 3})));
-    }
-
-    public static int[] solution(int n, int[] info) {
-
-        for (int score : info) {
-            infoSum += score;
-        }
+    public int[] solution(int n, int[] info) {
 
         check(n, 0, new boolean[11], new int[11], info);
 
         return max == 0 ? new int[] {-1} : result;
     }
 
-    public static void check(int n, int sum, boolean[] visited, int[] arrows, int[] info) {
+    public void check(int n, int sum, boolean[] visited, int[] arrows, int[] info) {
 
         if (n == 0) {
             int lion = 0;
@@ -43,7 +34,6 @@ public class Solution59 {
             if (diff >= max) {
                 result = Arrays.copyOf(arrows, 11);
                 max = diff;
-//                System.out.println("result : " + Arrays.toString(result) + "  diff : " + diff + " visited : " + Arrays.toString(visited));
             }
             return;
         }
