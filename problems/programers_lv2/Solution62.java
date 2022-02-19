@@ -13,7 +13,6 @@ public class Solution62 {
         long y = left % n;
         int count = 0;
         while (true) {
-            System.out.println("x : " + x + "  y : " + y);
             arr[index++] = (int) Math.max(x, y++) + 1;
 
             if (count >= right - left) {
