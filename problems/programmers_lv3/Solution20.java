@@ -3,11 +3,6 @@ package programmers_lv3;
 import java.util.Arrays;
 
 public class Solution20 {
-    public static void main(String[] args) {
-        Solution20 solution20 = new Solution20();
-        boolean solution = solution20.solution(new int[][]{{0, 0, 0}, {1, 0, 0}, {0, 1, 1}}, new int[][]{{1, 1, 1}, {1, 1, 0}, {1, 0, 1}});
-        System.out.println(solution);
-    }
     public boolean solution(int[][] key, int[][] lock) {
 
         int M = key.length;
