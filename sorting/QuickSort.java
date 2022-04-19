@@ -9,8 +9,8 @@ public class QuickSort {
         int right = end;
 
         while (left <= right) {
-            while (left <= end && array[left] <= array[pivot]) left ++;
-            while (right > start && array[right] >= array[pivot]) right --;
+            while (left <= end && array[left] < array[pivot]) left ++;
+            while (right > start && array[right] > array[pivot]) right --;
 
             if (left > right) {
                 swap(pivot, right, array);
